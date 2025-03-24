@@ -1,0 +1,342 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+  
+  .login-container .wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .login-container .container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+  }
+  
+  .login-container .img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .login-container .img img {
+    width: 500px;
+  }
+  
+  .login-container .login-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .login-container form {
+    width: 360px;
+  }
+  
+  .login-container .login-content img {
+    height: 100px;
+  }
+  
+  .login-container .login-content h2 {
+    margin: 15px 0;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+  }
+  
+  /* Input Fields */
+  .login-container .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+  }
+  
+  .login-container .input-div.one {
+    margin-top: 0;
+  }
+  
+  .login-container .i {
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container .i i {
+    transition: 0.3s;
+  }
+  
+  .login-container .input-div > div {
+    position: relative;
+    height: 45px;
+  }
+  
+  .login-container .input-div > div > h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .login-container .input-div:before,
+  .login-container .input-div:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #38d39f;
+    transition: 0.4s;
+  }
+  
+  .login-container .input-div:before {
+    right: 50%;
+  }
+  
+  .login-container .input-div:after {
+    left: 50%;
+  }
+  
+  .login-container .input-div.focus:before,
+  .login-container .input-div.focus:after {
+    width: 50%;
+  }
+  
+  .login-container .input-div.focus > div > h5 {
+    top: -5px;
+    font-size: 15px;
+  }
+  
+  .login-container .input-div.focus > .i > i {
+    color: #38d39f;
+  }
+  
+  .login-container .input-div > div > input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Links and Buttons */
+  .login-container a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: 0.3s;
+  }
+  
+  .login-container a:hover {
+    color: #38d39f;
+  }
+  
+  .login-container .btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .login-container .btn:hover {
+    background-position: right;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1050px) {
+    .login-container .container {
+      grid-gap: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .login-container form {
+      width: 290px;
+    }
+  
+    .login-container .login-content h2 {
+      font-size: 2.4rem;
+      margin: 8px 0;
+    }
+  
+    .login-container .img img {
+      width: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .login-container .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .login-container .img {
+      display: none;
+    }
+  
+    .login-container .wave {
+      display: none;
+    }
+  
+    .login-container .login-content {
+      justify-content: center;
+    }
+  }
+
+  /* Role Selection Dropdown */
+.input-div.role {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div.role .i {
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-div.role .i i {
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.input-div.role .div {
+    position: relative;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.input-div.role .div select {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    appearance: none; /* Removes default dropdown arrow */
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+.input-div.role .div select:focus {
+    border: none;
+    outline: none;
+}
+
+/* Arrow for Dropdown */
+.input-div.role .div::after {
+    content: '\25BC'; /* Downward arrow */
+    position: absolute;
+    right: 10px;
+    color: #999;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.input-div.role .div select:focus + ::after {
+    color: #38d39f;
+}
+
+/* Hover and Focus States */
+.input-div.role:hover .i i,
+.input-div.role select:focus {
+    color: #38d39f;
+}
+
+.input-div.role:before,
+.input-div.role:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #38d39f;
+    transition: 0.4s;
+}
+
+.input-div.role:before {
+    right: 50%;
+}
+
+.input-div.role:after {
+    left: 50%;
+}
+
+.input-div.role.focus:before,
+.input-div.role.focus:after {
+    width: 50%;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+}

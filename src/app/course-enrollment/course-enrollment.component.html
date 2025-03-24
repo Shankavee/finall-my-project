@@ -1,0 +1,28 @@
+<div class="background">
+  <div class="container">
+    <h2>📜 Course Enrollment Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Course ID</th>
+          <th>Status</th>
+          <th>Enrollment Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enrollment of enrollments">
+          <td>{{ enrollment.student_id }}</td>
+          <td>{{ enrollment.course_id }}</td>
+          <td>{{ enrollment.status }}</td>
+          <td>{{ enrollment.enrollment_date }}</td>
+          <td>
+            <button (click)="updateStatus(enrollment.id, 'approved')" [disabled]="enrollment.status === 'approved'">Approve</button>
+            <button (click)="updateStatus(enrollment.id, 'rejected')" [disabled]="enrollment.status === 'rejected'">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

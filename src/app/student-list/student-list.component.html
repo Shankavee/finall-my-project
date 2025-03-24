@@ -1,0 +1,31 @@
+<div class="background">
+  <div class="container">
+    <h2>Student Progress</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Completed</th>
+        <th>Completion Date</th>
+        <th>Class</th>
+        <th>Attendance (%)</th>
+        <th>Engagement</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.completed ? "Yes" : "No" }}</td>
+        <td>{{ student.completionDate }}</td>
+        <td>{{ student.class }}</td>
+        <td>{{ student.attendance_percentage }}</td>
+        <td>{{ student.engagement_score }}</td>
+        <td>
+          <button (click)="viewDetails(student.id)">View Details</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

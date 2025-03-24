@@ -1,0 +1,101 @@
+<div class="register-container">
+  <div class="container">
+    <div class="img">
+      <img src="assets/2.jpg" alt="Background Image">
+    </div>
+    <div class="register-content">
+      <form #signupForm="ngForm" (ngSubmit)="signup()" novalidate>
+        <img src="assets/3.jpg" alt="Background Image">
+        <h2 class="title">Create Account</h2>
+
+        <!-- Full Name Input -->
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="div">
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter your full name"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+            />
+          </div>
+        </div>
+
+        
+        <!-- Email Input -->
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="div">
+            <input
+              type="email"
+              class="input"
+              placeholder="Enter your email"
+              [(ngModel)]="formData.email"
+              name="email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <input
+              type="password"
+              class="input"
+              placeholder="Enter your password"
+              [(ngModel)]="formData.password"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Confirm Password Input -->
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <input
+              type="password"
+              class="input"
+              placeholder="Confirm your password"
+              [(ngModel)]="formData.confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Role Selection -->
+        <div class="input-div role">
+          <div class="i">
+            <i class="fas fa-user-tag"></i>
+          </div>
+          <div class="div">
+            <select class="input" [(ngModel)]="formData.role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="student">Student</option>
+              <option value="instructor">Instructor</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <button type="submit" [disabled]="!signupForm.valid">Register</button>
+        <!-- Already Registered Link -->
+        <a routerLink="/login">Already have an account? Login here</a>
+      </form>
+    </div>
+  </div>
+</div>

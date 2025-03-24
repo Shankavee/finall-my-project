@@ -1,0 +1,13 @@
+<div class="background">
+<div class="assignment-submission">
+    <h2>📝 Assignment Submission</h2>
+    <div *ngFor="let assignment of assignments" class="assignment-card">
+      <h3>{{ assignment.title }}</h3>
+      <p>{{ assignment.description }}</p>
+      <p><strong>Due Date:</strong> {{ assignment.due_date }}</p>
+      <p><strong>Resources:</strong> <a [href]="assignment.resources" target="_blank">Download</a></p>
+      <input type="file" (change)="onFileSelected($event)" />
+      <button (click)="onSubmit(assignment.id)">Submit Assignment</button>
+    </div>
+  </div>
+</div>

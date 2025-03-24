@@ -1,0 +1,36 @@
+<div class="background">
+  <div class="section live-section animate">
+    <h2>🎥 Live Classes & Discussions</h2>
+    <p>Conduct live sessions via video conferencing and facilitate discussion forums.</p>
+    <button class="btn live-btn" (click)="startLiveClass()">Start Live Class</button>
+
+    <form (ngSubmit)="addClass()">
+      <input [(ngModel)]="newClass.title" name="title" placeholder="Class Title" required>
+      <textarea [(ngModel)]="newClass.description" name="description" placeholder="Class Description" required></textarea>
+      <input [(ngModel)]="newClass.start_time" name="start_time" type="datetime-local" required>
+      <input [(ngModel)]="newClass.meeting_link" name="meeting_link" placeholder="Meeting Link" required>
+      <button type="submit">Add Class</button>
+    </form>
+  
+
+  <div *ngIf="classes.length > 0; else noClasses">
+    <h3>Available Live Classes</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let cls of classes">
+        <div class="class-card">
+          <h4>{{ cls.title }}</h4>
+          <p>{{ cls.description }}</p>
+          <p><strong>Start Time:</strong> {{ cls.start_time | date: 'medium' }}</p>
+          <a [href]="cls.meeting_link" target="_blank" class="btn btn-primary">
+            Join Class
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noClasses>
+    <p>No live classes available at the moment.</p>
+  </ng-template>
+  </div>
+</div>

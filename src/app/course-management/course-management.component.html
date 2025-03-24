@@ -1,0 +1,25 @@
+<div class="background">
+  <div class="container">
+    <h2>Course Management</h2>
+
+    <h3>Create New Course</h3>
+    <input type="text" [(ngModel)]="newCourse.title" placeholder="Course Title">
+    <textarea [(ngModel)]="newCourse.description" placeholder="Course Description"></textarea>
+    <button (click)="addCourse()">Add Course</button>
+
+    <h3>Course List</h3>
+    <div *ngFor="let course of courses">
+      <h4>{{ course.title }}</h4>
+      <p>{{ course.description }}</p>
+      <button (click)="edit(course)">Edit</button>
+      <button (click)="deleteCourse(course.id)">Delete</button>
+    </div>
+
+    <div *ngIf="editCourse">
+      <h3>Edit Course</h3>
+      <input type="text" [(ngModel)]="editCourse.title">
+      <textarea [(ngModel)]="editCourse.description"></textarea>
+      <button (click)="updateCourse()">Update</button>
+    </div>
+  </div>
+</div>

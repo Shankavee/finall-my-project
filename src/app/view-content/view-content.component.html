@@ -1,0 +1,26 @@
+<div class="background">
+<div class="container">
+    <h2>View Uploaded Content</h2>
+    <input type="number" [(ngModel)]="courseId" placeholder="Enter Course ID">
+    <button (click)="fetchContent()">Fetch Content</button>
+  
+    <div *ngFor="let content of contentList">
+      <h3>{{ content.title }}</h3>
+      <p>File Type: {{ content.file_type }}</p>
+      
+      <div *ngIf="content.file_type === 'pdf'">
+        <a [href]="'http://localhost:5000' + content.file_path" target="_blank">View PDF</a>
+      </div>
+  
+      <div *ngIf="content.file_type === 'video'">
+        <video width="500" controls>
+          <source [src]="'http://localhost:5000' + content.file_path" type="video/mp4">
+        </video>
+      </div>
+  
+      <div *ngIf="content.file_type === 'ppt'">
+        <a [href]="'http://localhost:5000' + content.file_path" target="_blank">Download PowerPoint</a>
+      </div>
+    </div>
+  </div>
+ </div> 

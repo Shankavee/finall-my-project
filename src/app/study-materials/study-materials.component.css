@@ -1,0 +1,122 @@
+/* General styles for the section */
+.background {
+    background-image: url('/assets/abcd.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section.animate {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+    text-align: center; /* Center align text */
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+}
+
+/* Heading styles */
+.section.animate h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.section.animate h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-top: 20px;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Paragraph styles */
+.section.animate .card-text {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* List styles */
+.section.animate ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Center the list */
+    display: inline-block; /* Make the list inline-block for centering */
+    text-align: left; /* Align list items to the left */
+}
+
+.section.animate li {
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* New Button Design */
+.section.animate .btn-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid transparent; /* Add border for hover effect */
+}
+
+.section.animate .btn-link:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #1e7e34; /* Border color on hover */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .section.animate h2 {
+        font-size: 1.8em;
+    }
+
+    .section.animate h3 {
+        font-size: 1.3em;
+    }
+
+    .section.animate .btn-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

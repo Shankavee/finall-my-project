@@ -1,0 +1,13 @@
+<div class="background">
+<div class="learning-content">
+    <h2>📚 Interactive Learning Content</h2>
+    @for (content of learningContent; track content.id) {
+      <div class="content-card">
+        <h3>{{ content.title }}</h3>
+        <p>{{ content.description }}</p>
+        <p><strong>Type:</strong> {{ content.type }}</p>
+        <a [href]="content.file_path" target="_blank">View {{ content.type }}</a>
+      </div>
+    }
+  </div>
+ </div> 

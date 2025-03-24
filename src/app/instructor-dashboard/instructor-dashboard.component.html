@@ -1,0 +1,84 @@
+<div class="background">
+    <div class="dashboard">
+    <h1>👩‍🏫 Instructor Dashboard</h1>
+  
+    <div class="dashboard-sections">
+      <!-- Course Management -->
+      <div class="section animate">
+        <h2>📚 Course Management</h2>
+        <p class="card-text">Create, update, and manage courses, including modules, lessons, and assignments.</p>
+        <button  routerLink="/course-management" class="btn btn-primary">Create Course</button>
+      </div>
+  
+      <!-- Content Upload -->
+      <div class="section animate">
+        <h2>📤 Content Upload</h2>
+        <p class="card-text">Upload and organize study materials such as PDFs, videos, quizzes, and presentations.</p>
+        <button routerLink="/upload-content" class="btn btn-primary">Upload Materials</button>
+      </div>
+  
+      <!-- Assignments & Quizzes -->
+      <div class="section animate">
+        <h2>📝 Assignments & Quizzes</h2>
+        <p class="card-text">Design assignments, quizzes, and tests with auto-grading options.</p>
+        <button routerLink="/assignment" class="btn btn-primary">Create Assignment</button>
+      </div>
+  
+      <!-- Student Progress Tracking -->
+      <div class="section animate">
+        <h2>📊 Student Progress</h2>
+        <p class="card-text">Monitor student progress, attendance, and engagement analytics.</p>
+        <button class="btn btn-primary" routerLink="/student-list">View Progress</button>
+      </div>
+  
+    <!-- Live Classes -->
+    <div class="section live-section animate">
+        <h2>🎥 Live Classes & Discussions</h2>
+        <p>Conduct live sessions via video conferencing and facilitate discussion forums.</p>
+        <button class="btn live-btn" routerLink="/instructor-live-classes">Start Live Class</button>
+    </div>
+  
+  
+    <!-- Communication Tools -->
+    <div class="section communication-section animate">
+        <h2>📩 Communication Tools</h2>
+        <p>Send announcements, messages, and notifications to students.</p>
+        <button class="btn announcement-btn" routerLink="/communication">Send Announcement</button>
+    </div>
+  
+  
+    <!-- Grading & Feedback Section -->
+    <div class="section grading-section animate">
+        <h2>📋 Grading & Feedback</h2>
+        <p>Evaluate student submissions and provide feedback, grades, and improvement suggestions.</p>
+        <div class="grading-buttons">
+            <button class="btn grade-btn" routerLink="/grading">View Grades</button>
+            <button class="btn feedback-btn" routerLink="/feedback">View Feedback</button>
+        </div>
+    </div>
+
+  
+      <!-- Certifications -->
+      <div class="section animate">
+        <h2>🏆 Certificates</h2>
+        <p class="card-text">Award completion certificates based on predefined criteria.</p>
+        <button class="btn report-btn" routerLink="/certificates">certificates</button>
+      </div>
+      
+      <!-- Student Performance Reports -->
+      <div class="section animate">
+        <h2>📈 Student Performance Reports</h2>
+        <p>Generate detailed performance reports and insights for students.</p>
+        <button class="btn report-btn" routerLink="/performance-reports">Generate Reports</button>
+        </div>
+
+        <!-- Course Enrollment Management -->
+        <div class="section animate">
+            <h2>📜 Course Enrollment Management</h2>
+            <p>Approve, reject, or manage student enrollments in specific courses.</p>
+            <button class="btn enroll-btn" routerLink="/course-enrollment">Manage Enrollments</button>
+        </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer> 

@@ -1,0 +1,20 @@
+<div class="profile-container">
+    <div class="profile-card">
+      <img [src]="profile?.photo || 'assets/default-profile.png'" alt="Profile Photo" class="profile-photo" />
+      <h2>{{ profile?.name || 'Instructor Name' }}</h2>
+      <p><strong>Qualifications:</strong> {{ profile?.qualifications }}</p>
+      <p><strong>Experience:</strong> {{ profile?.experience }} years</p>
+    </div>
+  
+    <div class="ratings-section">
+      <h3>Ratings & Reviews</h3>
+      <div *ngFor="let review of reviews" class="review-card">
+        <p class="review-text">"{{ review.text }}"</p>
+        <div class="review-rating">
+          <span *ngFor="let star of [].constructor(review.rating)">⭐</span>
+        </div>
+        <small>- {{ review.student }}</small>
+      </div>
+    </div>
+  </div>
+  

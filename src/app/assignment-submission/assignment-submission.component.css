@@ -1,0 +1,141 @@
+/* Container for the assignment submission */
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 'top' is not a valid value, use 'flex-start' */
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('/assets/abcd.jpg');
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+.assignment-submission {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Heading style */
+  .assignment-submission h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Card container */
+  .assignment-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  /* Card hover effect */
+  .assignment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title style */
+  .assignment-card h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  /* Description style */
+  .assignment-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Due date and resources style */
+  .assignment-card p strong {
+    color: #2c3e50;
+  }
+  
+  /* Link style */
+  .assignment-card a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Link hover effect */
+  .assignment-card a:hover {
+    background-color: #2980b9;
+  }
+  
+  /* File input style */
+  .assignment-card input[type="file"] {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px dashed #3498db;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #34495e;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* File input hover effect */
+  .assignment-card input[type="file"]:hover {
+    border-color: #2980b9;
+  }
+  
+  /* Submit button style */
+  .assignment-card button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Submit button hover effect */
+  .assignment-card button:hover {
+    background-color: #219653;
+  }
+  
+  /* Animation for fading in from the top */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for fading in from the bottom */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

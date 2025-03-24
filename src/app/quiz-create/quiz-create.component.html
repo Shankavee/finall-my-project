@@ -1,0 +1,19 @@
+ <app-quiz></app-quiz>
+ <div class="background">
+  <div class="container">
+    <h2>Create Quiz</h2>
+    <input [(ngModel)]="quizTitle" placeholder="Quiz Title" />
+
+    <h3>Questions:</h3>
+    <ul>
+      <li *ngFor="let q of questions">{{ q.text }}</li>
+    </ul>
+
+    <input [(ngModel)]="newQuestion" placeholder="Enter Question" />
+    <br>
+    <button (click)="addQuestion()">Add Question</button><br>
+    <button (click)="saveQuiz()">Save Quiz</button>
+  </div>
+</div>
+
+ 

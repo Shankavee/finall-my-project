@@ -1,0 +1,17 @@
+<div class="background">
+<div class="section animate">
+    <h2>📥 Downloadable Study Materials</h2>
+    <p class="card-text">Download resources such as PDFs, presentations, and lecture notes.</p>
+  
+    <div *ngIf="materials.length > 0">
+      <h3>Available Study Materials</h3>
+      <ul>
+        <li *ngFor="let material of materials">
+          <a [href]="material.url" target="_blank" class="btn btn-link">
+            {{ material.type }} - Lesson {{ material.lesson_id }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+ </div> 

@@ -1,0 +1,31 @@
+<div class="background">
+<div class="container">
+    <h2>Grades</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Score</th>
+                <th>Max Score</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let grade of grades">
+                <td>{{ grade.id }}</td>
+                <td>{{ grade.studentName }}</td>
+                <td>{{ grade.course }}</td>
+                <td>{{ grade.score }}</td>
+                <td>{{ grade.maxScore }}</td>
+                <td>{{ grade.date | date:'short' }}</td>
+                <td>
+                    <button (click)="viewDetails(grade.id)">View Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

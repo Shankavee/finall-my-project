@@ -1,0 +1,11 @@
+<div class="background">
+<div class="course-container">
+    <h2>Recommended Courses for You</h2>
+    <div *ngFor="let course of recommendedCourses" class="course-card">
+      <h3>{{ course.title }}</h3>
+      <p>{{ course.description }}</p>
+      <span>Level: {{ course.level }}</span>
+      <button class="enroll-btn">Enroll Now</button>
+    </div>
+  </div>
+ </div> 

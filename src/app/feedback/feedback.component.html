@@ -1,0 +1,26 @@
+<div class="background">
+<div class="container">
+    <!-- Feedback Table -->
+    <div class="feedback-table">
+      <h2>📋 Feedback List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Comments</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feedback of feedbacks">
+            <td>{{ feedback.studentName }}</td>
+            <td>{{ feedback.course }}</td>
+            <td>{{ feedback.comments }}</td>
+            <td>{{ feedback.date | date:'short' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

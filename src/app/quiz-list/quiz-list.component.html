@@ -1,0 +1,26 @@
+<app-quiz></app-quiz>
+<div class="background">
+  <h2>Available Quizzes</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quiz of quizzes">
+        <td>{{ quiz.id }}</td>
+        <td>{{ quiz.title }}</td>
+        <td>{{ quiz.description }}</td>
+        <td>{{ quiz.created_at | date }}</td>
+        <td>
+          <button (click)="viewDetails(quiz.id)">View Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

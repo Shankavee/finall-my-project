@@ -1,0 +1,171 @@
+/* Background Styling with a Gradient & Animation */
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('/assets/abcd.jpg');
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fadeInBg 1.2s ease-in-out;
+  padding: 20px;
+}
+
+/* Glassmorphism Container */
+.container {
+  background: rgba(242, 246, 248, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid rgba(233, 226, 226, 0.3);
+  animation: bounceIn 0.8s ease-in-out;
+}
+
+/* Page Title with Glowing Effect */
+h2 {
+  color: #ffeb3b;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 235, 59, 0.8);
+  animation: slideInTitle 1s ease-in-out;
+}
+
+/* Subheading */
+h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  opacity: 0.9;
+  animation: slideInText 1.2s ease-in-out;
+}
+
+/* Input Fields with Neon Effect */
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.6);
+}
+
+/* Questions List with Glowing Cards */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  width: 80%;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: fadeInItem 0.5s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Buttons with Neon Glow & Tilt Effect */
+button {
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 87, 34, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0px 10px 20px rgba(255, 87, 34, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+    background: black;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTitle {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInText {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

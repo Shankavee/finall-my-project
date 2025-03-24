@@ -1,0 +1,31 @@
+.background {
+    background-image: url('/assets/abcd.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.course-container {
+    padding: 20px;
+  }
+  
+  .course-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .enroll-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

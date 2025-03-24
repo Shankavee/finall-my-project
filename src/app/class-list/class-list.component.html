@@ -1,0 +1,17 @@
+<div class="background">
+<h2>Live Classes</h2>
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Start Time</th>
+    <th>Join Link</th>
+  </tr>
+  <tr *ngFor="let classItem of classes">
+    <td>{{ classItem.title }}</td>
+    <td>{{ classItem.description }}</td>
+    <td>{{ classItem.start_time }}</td>
+    <td><a [href]="classItem.meeting_link" target="_blank">Join</a></td>
+  </tr>
+</table>
+</div>

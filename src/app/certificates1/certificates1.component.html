@@ -1,0 +1,25 @@
+<div class="background">
+    <div class="input-container">
+        <label for="studentId">Enter Student ID:</label>
+        <input type="number" id="studentId" [(ngModel)]="studentId" />
+        <button (click)="fetchStudentDetails()">Fetch Details</button>
+    </div>
+  
+  <div class="certificate-container" id="certificate" *ngIf="student.name && student.course && student.completionDate">
+    <div class="certificate-content">
+      <div class="certificate-header">
+        <h1>Certificate</h1>
+        <h2>of Excellence</h2>
+        <hr class="title-line">
+      </div>
+      <div class="certificate-body">
+        <p>This Certificate Is Proudly Presented To</p>
+        <h3 class="recipient-name">{{ student.name }}</h3>
+        <p>Has Completed</p>
+        <h4 class="course-name">{{ student.course }}</h4>
+        <p>On</p>
+        <h4 class="completion-date">{{ student.completionDate | date }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+ <app-quiz></app-quiz>
+ <div class="background">
+  <h2>Quiz Result</h2>
+
+  <!-- Input for ID -->
+  <div class="input-container">
+    <label for="quizAttemptId">Enter Quiz Attempt ID:</label>
+    <input
+      type="number"
+      id="quizAttemptId"
+      [(ngModel)]="quizAttemptId"
+      placeholder="Enter ID"
+    />
+    <button (click)="fetchQuizResultById()">Fetch Result</button>
+  </div>
+
+  <!-- Display Quiz Result -->
+  <div *ngIf="quizResult">
+    <p><strong>Quiz ID:</strong> {{ quizResult.quiz_id }}</p>
+    <p><strong>User:</strong> {{ quizResult.user_name }}</p>
+    <p><strong>Score:</strong> {{ quizResult.score }}/100</p>
+    <p *ngIf="quizResult.score >= 50" class="pass-message">🎉 Congratulations! You passed!</p>
+    <p *ngIf="quizResult.score < 50" class="fail-message">❌ Better luck next time.</p>
+  </div>
+
+  <a routerLink="/quiz-list" class="back-link">Back to Quizzes</a>
+</div>

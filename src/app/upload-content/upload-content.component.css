@@ -1,0 +1,224 @@
+.background {
+    background-image: url('/assets/abcd.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container Styling */
+  .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover animation for the container */
+  .container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Title Styling */
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Form Elements Styling */
+  label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  input[type="number"], 
+  input[type="text"], 
+  select, 
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on button */
+  button:hover {
+    background-color: #2980b9;
+  }
+ 
+  
+  p.error {
+    color: #e74c3c;
+  }
+  
+  /* Uploaded Files Styling */
+  h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  div.uploaded-file {
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Hover effect for uploaded file block */
+  div.uploaded-file:hover {
+    transform: scale(1.03);
+  }
+  
+  
+  /* Hover effect on file link */
+  a:hover {
+    text-decoration: underline;
+  }
+  
+/* Styling for uploaded file block */
+.uploaded-file {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect on uploaded file block */
+  .uploaded-file:hover {
+    transform: scale(1.02);
+  }
+  
+  /* File title and type styling */
+  .file-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .file-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .file-type {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* File action buttons styling */
+  .file-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* View button styling */
+  .view-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on View button */
+  .view-btn:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+  }
+  
+  /* Delete button styling */
+  .delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on Delete button */
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Styling for the View and Delete buttons on mobile or small screens */
+  @media screen and (max-width: 768px) {
+    .file-actions {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

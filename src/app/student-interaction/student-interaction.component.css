@@ -1,0 +1,171 @@
+/* General Section Styling */
+.background {
+    background-image: url('/assets/15.jpeg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f0f4ff, #d9e7ff);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .forums-section,
+  .announcements-section {
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .forums-section:hover,
+  .announcements-section:hover {
+    transform: translateY(-5px);
+  }
+  
+  h2 {
+    color: #2b2d42;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Post Form Styling */
+  .post-form,
+  .announcement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: #eef2ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d0d7ff;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9fbff;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #5e60ce;
+    outline: none;
+    box-shadow: 0 0 8px rgba(94, 96, 206, 0.5);
+  }
+  
+  button {
+    align-self: flex-end;
+    background: linear-gradient(90deg, #5e60ce, #4ea8de);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #4ea8de, #5e60ce);
+    transform: translateY(-3px);
+  }
+  
+  /* Forum Posts and Announcements */
+  .forum-post,
+  .announcement {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #f9fbff, #eef2ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .forum-post:hover,
+  .announcement:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .forum-post h3,
+  .announcement h3 {
+    font-size: 20px;
+    color: #2b2d42;
+    margin-bottom: 12px;
+  }
+  
+  .forum-post p,
+  .announcement p {
+    font-size: 15px;
+    color: #4a4e69;
+    line-height: 1.6;
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .forum-post,
+  .announcement {
+    animation: fadeSlideIn 0.6s ease-in-out;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 8px rgba(94, 96, 206, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(94, 96, 206, 0.8);
+    }
+  }
+  
+  button:hover {
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .forums-section,
+    .announcements-section {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  

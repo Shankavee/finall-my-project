@@ -1,0 +1,89 @@
+/* General Styles */
+.navigation {
+  background: linear-gradient(90deg, #007bff, #4a90e2);
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.6s ease-out;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-container a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-container a:hover {
+  color: #ffdd57;
+  transform: scale(1.1);
+}
+
+.nav-container .login-link {
+  background: #ffdd57;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-container .login-link:hover {
+  background: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Hover Animation for Title */
+.nav-container a:first-child {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-container a:first-child::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-container a:first-child:hover::after {
+  width: 100%;
+}
+
+/* Sticky Header Shadow */
+.navigation.scrolled {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

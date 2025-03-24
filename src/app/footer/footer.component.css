@@ -1,0 +1,136 @@
+/* Footer Container */
+.footer {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Content Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Footer Columns */
+.col-md-4 {
+    width: 30%;
+    min-width: 250px;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Headings */
+.col-md-4 h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Underline Effect for Headings */
+.col-md-4 h5::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #f1c40f;
+    text-decoration: underline;
+}
+
+/* Contact Details */
+.col-md-4 p {
+    margin: 8px 0;
+    font-size: 14px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.col-md-4 p:hover {
+    opacity: 1;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Images */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Icons */
+.social-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

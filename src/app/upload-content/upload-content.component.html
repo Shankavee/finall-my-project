@@ -1,0 +1,36 @@
+<div class="background">
+  <div class="container">
+    <h2>Upload Study Materials</h2>
+
+    <label>Course ID:</label>
+    <input type="number" [(ngModel)]="courseId" placeholder="Enter Course ID">
+
+    <label>Title:</label>
+    <input type="text" [(ngModel)]="title" placeholder="Enter Title">
+
+    <label>File Type:</label>
+    <select [(ngModel)]="fileType">
+      <option value="pdf">PDF</option>
+      <option value="video">Video</option>
+      <option value="ppt">PowerPoint</option>
+    </select>
+
+    <label>Upload File:</label>
+    <input type="file" (change)="onFileSelected($event)">
+
+    <button (click)="uploadFile()">Upload</button>
+    <p>{{ uploadMessage }}</p>
+
+    <h3>Uploaded Files</h3>
+    <div *ngFor="let file of uploadedFiles" class="uploaded-file">
+      <div class="file-info">
+        <p class="file-title">{{ file.title }} <span class="file-type">({{ file.file_type }})</span></p>
+        <div class="file-actions">
+          <a class="view-btn" [href]="'http://localhost:3000' + file.file_path" target="_blank">View</a>
+          <button class="delete-btn" (click)="deleteContent(file.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

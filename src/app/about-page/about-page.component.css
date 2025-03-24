@@ -1,0 +1,168 @@
+/* General Page Styles */  
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #2563eb, #1e3a8a);
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #facc15;
+  }
+  
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: #1E40AF;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* Mission & Vision */
+  .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .mission-vision div {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  /* Features */
+  .features {
+    background: #F3F4F6;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .feature-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* How It Works */
+  .how-it-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .how-box {
+    background: #E5E7EB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

@@ -1,0 +1,31 @@
+<div class="background">
+    <div class="forums-section">
+        <h2>Discussion Forums</h2>
+        <div class="post-form">
+        <input type="text" [(ngModel)]="newPost.title" placeholder="Post Title" />
+        <textarea [(ngModel)]="newPost.content" placeholder="Post Content"></textarea>
+        <button (click)="createPost()">Create Post</button>
+        </div>
+        <div class="forums">
+        <div *ngFor="let forum of forums" class="forum-post">
+            <h3>{{ forum.title }}</h3>
+            <p>{{ forum.content }}</p>
+        </div>
+        </div>
+    </div>
+    
+    <div class="announcements-section">
+        <h2>Announcements</h2>
+        <div class="announcement-form">
+        <input type="text" [(ngModel)]="newAnnouncement.title" placeholder="Announcement Title" />
+        <textarea [(ngModel)]="newAnnouncement.content" placeholder="Announcement Content"></textarea>
+        <button (click)="createAnnouncement()">Create Announcement</button>
+        </div>
+        <div class="announcements">
+        <div *ngFor="let announcement of announcements" class="announcement">
+            <h3>{{ announcement.title }}</h3>
+            <p>{{ announcement.content }}</p>
+        </div>
+        </div>
+    </div>
+</div>  

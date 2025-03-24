@@ -1,0 +1,27 @@
+<div class="background">
+<div class="lesson-container">
+    <h2>Course Lessons</h2>
+  
+    <div *ngFor="let lesson of lessons" class="lesson-card">
+      <h3>{{ lesson.title }}</h3>
+      <p>{{ lesson.content }}</p>
+  
+      <div *ngFor="let material of lesson.materials">
+        <div *ngIf="material.type === 'video'">
+          <h4>Video</h4>
+          <iframe [src]="material.url | safeUrl" width="600" height="350"></iframe>
+        </div>
+        <div *ngIf="material.type === 'pdf'">
+          <h4>PDF Document</h4>
+          <a [href]="material.url" target="_blank">View PDF</a>
+        </div>
+        <div *ngIf="material.type === 'quiz'">
+          <h4>Quiz</h4>
+          <a [href]="material.url" target="_blank">Take Quiz</a>
+        </div>
+      </div>
+  
+      <button (click)="markAsComplete(lesson.id)">Mark as Complete</button>
+    </div>
+  </div>
+ </div> 

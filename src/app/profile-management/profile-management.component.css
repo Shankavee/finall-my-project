@@ -1,0 +1,80 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .profile-card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    animation: bounceIn 1.5s ease-in-out;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+  }
+  
+  .ratings-section {
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .review-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+  }
+  
+  .review-rating span {
+    color: #ff9800;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

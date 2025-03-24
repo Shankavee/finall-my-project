@@ -1,0 +1,23 @@
+<div class="background">
+  <div class="communication-container">
+    <h2>📩 Communication Tools</h2>
+    <p>Send announcements, messages, and notifications to students.</p>
+
+    <!-- Form to Send Announcement -->
+    <div class="announcement-form">
+      <input type="text" [(ngModel)]="newAnnouncement.title" placeholder="Enter Title" class="input-field" />
+      <textarea [(ngModel)]="newAnnouncement.message" placeholder="Enter Message" class="textarea-field"></textarea>
+      <button class="btn send-btn" (click)="sendAnnouncement()">Send Announcement</button>
+    </div>
+
+    <!-- List of Announcements -->
+    <div class="announcement-list">
+      <h3>Recent Announcements</h3>
+      <div *ngFor="let ann of announcements" class="announcement-card">
+        <h4>{{ ann.title }}</h4>
+        <p>{{ ann.message }}</p>
+        <small>Posted on: {{ ann.created_at }}</small>
+      </div>
+    </div>
+  </div>
+</div>

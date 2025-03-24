@@ -1,0 +1,90 @@
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url('/assets/abcd.jpg');
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fadeIn 1s ease-in-out;
+}
+/* Style the table container */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Table header */
+th {
+  background: #ff6b81;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Table rows */
+td {
+  padding: 12px;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effect */
+tr:hover {
+  background: #ffdde1;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Student list heading */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #ff4757;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: slideInDown 0.8s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

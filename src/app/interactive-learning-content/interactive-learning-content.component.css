@@ -1,0 +1,102 @@
+.background {
+    background-image: url('/assets/abcd.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Container for the learning content */
+.learning-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Heading style */
+  .learning-content h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Card container */
+  .content-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  /* Card hover effect */
+  .content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title style */
+  .content-card h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  /* Description style */
+  .content-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Type style */
+  .content-card p strong {
+    color: #2c3e50;
+  }
+  
+  /* Link style */
+  .content-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Link hover effect */
+  .content-card a:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animation for fading in from the top */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for fading in from the bottom */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

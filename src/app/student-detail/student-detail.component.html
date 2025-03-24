@@ -1,0 +1,32 @@
+<div class="background">
+  <div class="container">
+      <h2>Student Details</h2>
+      <table border="1">
+        <tr>
+          <td><strong>ID:</strong></td>
+          <td>{{ student.id }}</td>
+        </tr>
+        <tr>
+          <td><strong>Name:</strong></td>
+          <td>{{ student.name }}</td>
+        </tr>
+        <tr>
+          <td><strong>Email:</strong></td>
+          <td>{{ student.email }}</td>
+        </tr>
+        <tr>
+          <td><strong>Completed:</strong></td>
+          <td>{{ student.completed ? "Yes" : "No" }}</td>
+        </tr>
+        <tr>
+          <td><strong>Completion Date:</strong></td>
+          <td>{{ student.completionDate }}</td>
+        </tr>
+        <tr>
+          <td><strong>Class:</strong></td>
+          <td>{{ student.class }}</td>
+        </tr>
+      </table>
+      <a routerLink="/student-list">Back to Student List</a>
+    </div>
+</div>  

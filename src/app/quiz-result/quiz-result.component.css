@@ -1,0 +1,150 @@
+.background {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: slideInFromTop 0.8s ease-out;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.input-container {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.pass-message {
+  color: #28a745;
+  font-weight: bold;
+  animation: bounce 1s ease-in-out;
+}
+
+.fail-message {
+  color: #dc3545;
+  font-weight: bold;
+  animation: shake 0.5s ease-in-out;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

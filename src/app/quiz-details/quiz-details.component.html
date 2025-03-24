@@ -1,0 +1,23 @@
+<app-quiz></app-quiz>
+<div class="background">
+    <h2>Quiz Details</h2>
+    <table border="1">
+      <tr>
+        <td><strong>ID:</strong></td>
+        <td>{{ quiz?.id }}</td>
+      </tr>
+      <tr>
+        <td><strong>Title:</strong></td>
+        <td>{{ quiz?.title }}</td>
+      </tr>
+      <tr>
+        <td><strong>Description:</strong></td>
+        <td>{{ quiz?.description }}</td>
+      </tr>
+      <tr>
+        <td><strong>Created At:</strong></td>
+        <td>{{ quiz?.created_at | date }}</td>
+      </tr>
+    </table>
+    <a routerLink="/quiz-list">Back to Quiz List</a>
+  </div>

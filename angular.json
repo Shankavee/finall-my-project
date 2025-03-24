@@ -31,10 +31,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+                "src/assets",
+                "src/custom-folder"
             ],
             "styles": [
               "src/styles.css"

@@ -1,0 +1,24 @@
+<app-quiz></app-quiz>
+<div class="background">
+  <h2>Quiz Attempts</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Quiz ID</th>
+        <th>User Name</th>
+        <th>Score</th>
+        <th>Submitted At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let attempt of quizAttempts">
+        <td>{{ attempt.id }}</td>
+        <td>{{ attempt.quiz_id }}</td>
+        <td>{{ attempt.user_name }}</td>
+        <td>{{ attempt.score }}</td>
+        <td>{{ attempt.submitted_at | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

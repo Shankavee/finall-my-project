@@ -1,0 +1,72 @@
+<div class="login-container">
+  <div class="container">
+    <div class="img">
+      <img src="assets/2.jpg" alt="Background Image" />
+    </div>
+    <div class="login-content">
+      <form #loginForm="ngForm" (ngSubmit)="login()" novalidate>
+        <img src="assets/3.jpg" alt="Logo" />
+        <h2 class="title">Login</h2>
+
+        <!-- Email Input -->
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="div">
+            <input
+              type="email"
+              class="input"
+              placeholder="Enter your email"
+              [(ngModel)]="loginData.email"
+              name="email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <input
+              type="password"
+              class="input"
+              placeholder="Enter your password"
+              [(ngModel)]="loginData.password"
+              name="password"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Role Selection -->
+        <div class="input-div role">
+          <div class="i">
+            <i class="fas fa-user-tag"></i>
+          </div>
+          <div class="div">
+            <select
+              class="input"
+              [(ngModel)]="loginData.role"
+              name="role"
+              required
+            >
+              <option value="" disabled selected>Select your role</option>
+              <option value="student">Student</option>
+              <option value="instructor">Instructor</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
+        <!-- Register Link -->
+        <a routerLink="/register">Don't have an account? Register here</a>
+      </form>
+    </div>
+  </div>
+</div>

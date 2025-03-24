@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+.background {
+    background-image: url('/assets/abcd.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dashboard {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .dashboard-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .section {
+    background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px); /* Adjusts to two columns */
+    max-width: 500px; 
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .section:hover {
+    transform: scale(1.05);
+  }
+
+  .course-card {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .progress-bar {
+      background: #ddd;
+      height: 10px;
+      border-radius: 5px;
+      margin-top: 5px;
+
+      .progress {
+        background: #4caf50;
+        height: 100%;
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: #0056b3;
+    }
+
+    &.danger {
+      background: #ff4d4d;
+      &:hover {
+        background: #d32f2f;
+      }
+    }
+  }
+
+  .status {
+    font-weight: bold;
+  }
+
+  .completed {
+    color: green;
+  }
+
+  .in-progress {
+    color: orange;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

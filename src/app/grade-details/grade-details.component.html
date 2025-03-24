@@ -1,0 +1,23 @@
+<div class="background">
+<div class="container">
+    <h2>Grade Details</h2>
+    <form (ngSubmit)="updateGrade()">
+      <label>Student Name:</label>
+      <input [(ngModel)]="grade.studentName" name="studentName" required />
+  
+      <label>Course:</label>
+      <input [(ngModel)]="grade.course" name="course" required />
+  
+      <label>Score:</label>
+      <input [(ngModel)]="grade.score" name="score" type="number" required />
+  
+      <label>Max Score:</label>
+      <input [(ngModel)]="grade.maxScore" name="maxScore" type="number" required />
+  
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  <div *ngIf="!grade">
+    <p>Loading...</p>
+  </div>
+</div>

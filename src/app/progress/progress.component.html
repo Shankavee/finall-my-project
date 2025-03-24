@@ -1,0 +1,23 @@
+<div class="background">
+<div class="progress-container">
+    <h2>Progress Tracking</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Course ID</th>
+          <th>Completion Percentage</th>
+          <th>Last Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let progress of progressData">
+          <td>{{ progress.student_id }}</td>
+          <td>{{ progress.course_id }}</td>
+          <td>{{ progress.completion_percentage }}%</td>
+          <td>{{ progress.last_activity | date: 'medium' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  

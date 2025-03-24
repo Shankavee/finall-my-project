@@ -1,0 +1,39 @@
+<div class="background">
+  <div class="container">
+    <h1>Assignment Management</h1>
+
+    <div class="form-section">
+      <h2>Create Assignment</h2>
+      <form (ngSubmit)="createAssignment()">
+        <input type="text" [(ngModel)]="newAssignment.title" placeholder="Title" name="title" required />
+        <textarea [(ngModel)]="newAssignment.description" placeholder="Description" name="description"></textarea>
+        <input type="date" [(ngModel)]="newAssignment.due_date" name="due_date" required />
+        <input type="text" [(ngModel)]="newAssignment.resources" placeholder="Resources" name="resources" />
+        <button type="submit">Create Assignment</button>
+      </form>
+    </div>
+
+    <div *ngIf="selectedAssignment" class="form-section">
+      <h2>Edit Assignment</h2>
+      <form (ngSubmit)="updateAssignment()">
+        <input type="text" [(ngModel)]="selectedAssignment.title" name="editTitle" required />
+        <textarea [(ngModel)]="selectedAssignment.description" name="editDescription"></textarea>
+        <input type="date" [(ngModel)]="selectedAssignment.due_date" name="editDueDate" required />
+        <input type="text" [(ngModel)]="selectedAssignment.resources" name="editResources" />
+        <button type="submit">Save Changes</button>
+        <button type="button" (click)="cancelEdit()">Cancel</button>
+      </form>
+    </div>
+
+    <div class="assignments-section">
+      <h2>Assignments</h2>
+      <div *ngFor="let assignment of assignments" class="assignment-card">
+        <h3>{{ assignment.title }}</h3>
+        <p>{{ assignment.description }}</p>
+        <p><strong>Deadline:</strong> {{ assignment.due_date | date }}</p>
+        <button (click)="populateAssignmentForm(assignment)">Edit</button>
+        <button (click)="confirmDeleteAssignment(assignment.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
